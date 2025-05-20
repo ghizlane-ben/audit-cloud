@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>GHIDOR Audit - Rapport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: #001F3F;
+            border-radius: 8px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .menu {
+            display: flex;
+            gap: 30px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .run-audit-btn {
+            background-color: #4DB8FF;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            color: black;
+        }
+        .section-bar {
+            height: 3px;
+            background-color: #007BFF;
+        }
+        .content {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #001F3F;
+            color: white;
+        }
+        .Critique { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-section">
+            <div class="logo">★</div>
+            <span style="font-size: 20px; font-weight: bold;">GHIDOR</span>
+        </div>
+        <div class="menu">
+            <a href="ghidor_audit.html">Audit</a>
+            <a href="ghidor_cloud.html">Cloud</a>
+            <a href="ghidor_cis.html">CIS Benchmark</a>
+            <a href="#">Help ▼</a>
+        </div>
+        <button class="run-audit-btn">Run audit</button>
+    </div>
+    <div class="section-bar"></div>
+    <div class="content" style="background-color: white; margin: 40px auto; padding: 30px; border-radius: 12px; max-width: 900px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+        <h1>🎯 À propos de GHIDOR</h1>
+        <p><strong>GHIDOR</strong> est un outil d’audit de sécurité AWS automatisé développé pour évaluer la conformité d’un environnement cloud selon les bonnes pratiques du <strong>CIS Benchmark</strong>. Il permet aux professionnels de détecter rapidement les failles de configuration et d’appliquer des recommandations adaptées.</p>
+        <h2>🛡️ Qu’est-ce qu’un audit automatisé ?</h2>
+        <p>Un audit automatisé est un processus réalisé sans intervention humaine manuelle, qui analyse automatiquement l’infrastructure AWS en temps réel ou à la demande, identifie les écarts par rapport aux normes, et génère un rapport détaillé (HTML et JSON).</p>
+        <h2>🔧 Ce que fait GHIDOR :</h2>
+        <ul>
+            <li>Vérifie la configuration des services AWS critiques (IAM, S3, RDS, EC2, CloudTrail...)</li>
+            <li>Évalue les bonnes pratiques de sécurité basées sur les niveaux <strong>Level 1</strong> et <strong>Level 2</strong> du CIS Benchmark</li>
+            <li>Génère des rapports interactifs et professionnels</li>
+            <li>Fournit des recommandations immédiates pour corriger les failles détectées</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Rapport d'Audit AWS</h1>
+        <p>Date de génération : 2025-05-20 17:21</p>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Finding</th>
+                <th>Gravité</th>
+                <th>Recommandation</th>
+                <th>Référence CIS</th>
+            </tr>
+            <tr>
+                <td>IAM</td>
+                <td>Utilisateur sans MFA : admin</td>
+                <td class="Critique">Critique</td>
+                <td>Activer MFA</td>
+                <td>1.2</td>
+            </tr>
+            <tr>
+                <td>S3</td>
+                <td>bucket-x est public</td>
+                <td class="Critique">Critique</td>
+                <td>Supprimer accès public</td>
+                <td>2.1.1</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+    
+
+    
+
+    
+
+</body>
+</html>
